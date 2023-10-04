@@ -93,36 +93,39 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(160,150)" to="(230,150)"/>
     <wire from="(160,210)" to="(160,270)"/>
     <wire from="(160,150)" to="(160,210)"/>
-    <comp lib="6" loc="(296,92)" name="Text">
-      <a name="text" val="O flip flop tipo D serve para guardar um valor."/>
-      <a name="font" val="Times New Roman plain 14"/>
-    </comp>
-    <comp lib="1" loc="(390,260)" name="NAND Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
     <comp lib="0" loc="(200,210)" name="Clock">
       <a name="label" val="CLK"/>
       <a name="labelloc" val="south"/>
-      <a name="labelfont" val="Times New Roman bold 14"/>
-    </comp>
-    <comp lib="1" loc="(270,160)" name="NAND Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="0" loc="(110,210)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="D"/>
       <a name="labelfont" val="Times New Roman bold 14"/>
     </comp>
     <comp lib="1" loc="(390,160)" name="NAND Gate">
       <a name="size" val="30"/>
       <a name="inputs" val="2"/>
     </comp>
+    <comp lib="1" loc="(270,160)" name="NAND Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="6" loc="(296,92)" name="Text">
+      <a name="text" val="O flip flop tipo D serve para guardar um valor."/>
+      <a name="font" val="Times New Roman plain 14"/>
+    </comp>
     <comp lib="1" loc="(270,260)" name="NAND Gate">
       <a name="size" val="30"/>
       <a name="inputs" val="2"/>
       <a name="negate1" val="true"/>
+    </comp>
+    <comp lib="0" loc="(460,160)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Q"/>
+      <a name="labelloc" val="east"/>
+      <a name="labelfont" val="Times New Roman bold 14"/>
+    </comp>
+    <comp lib="0" loc="(110,210)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="D"/>
+      <a name="labelfont" val="Times New Roman bold 14"/>
     </comp>
     <comp lib="0" loc="(460,260)" name="Pin">
       <a name="facing" val="west"/>
@@ -131,12 +134,9 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="labelloc" val="east"/>
       <a name="labelfont" val="Times New Roman bold 14"/>
     </comp>
-    <comp lib="0" loc="(460,160)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="Q"/>
-      <a name="labelloc" val="east"/>
-      <a name="labelfont" val="Times New Roman bold 14"/>
+    <comp lib="1" loc="(390,260)" name="NAND Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
     </comp>
   </circuit>
   <circuit name="Contador de 9 à 0">
@@ -228,47 +228,32 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(650,140)" to="(660,140)"/>
     <wire from="(490,270)" to="(490,390)"/>
     <wire from="(600,270)" to="(610,270)"/>
-    <comp lib="4" loc="(650,270)" name="D Flip-Flop"/>
-    <comp lib="0" loc="(740,410)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="fanout" val="4"/>
-      <a name="incoming" val="4"/>
-    </comp>
-    <comp lib="0" loc="(260,240)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="CLOCK"/>
-      <a name="labelfont" val="Times New Roman bold 12"/>
-    </comp>
-    <comp lib="0" loc="(750,410)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="4"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(740,180)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="fanout" val="4"/>
-      <a name="incoming" val="4"/>
-    </comp>
-    <comp lib="4" loc="(560,270)" name="D Flip-Flop"/>
-    <comp lib="4" loc="(470,270)" name="D Flip-Flop"/>
-    <comp loc="(620,170)" name="Circuito de 9 à 0">
-      <a name="facing" val="west"/>
-      <a name="label" val="Circuito 9 à 0"/>
-      <a name="labelfont" val="Times New Roman bold 12"/>
-    </comp>
-    <comp lib="0" loc="(760,180)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="4"/>
-      <a name="labelloc" val="east"/>
-    </comp>
     <comp lib="0" loc="(300,390)" name="Pin">
       <a name="facing" val="north"/>
       <a name="tristate" val="false"/>
       <a name="label" val="ENABLE"/>
       <a name="labelloc" val="south"/>
       <a name="labelfont" val="Times New Roman bold 12"/>
+    </comp>
+    <comp lib="0" loc="(740,410)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
+    </comp>
+    <comp lib="4" loc="(560,270)" name="D Flip-Flop"/>
+    <comp lib="0" loc="(750,410)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="4"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="5" loc="(750,120)" name="Hex Digit Display"/>
+    <comp lib="4" loc="(650,270)" name="D Flip-Flop"/>
+    <comp lib="0" loc="(760,180)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="4"/>
+      <a name="labelloc" val="east"/>
     </comp>
     <comp lib="0" loc="(350,380)" name="Pin">
       <a name="facing" val="north"/>
@@ -277,8 +262,23 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="labelloc" val="south"/>
       <a name="labelfont" val="Times New Roman bold 12"/>
     </comp>
+    <comp loc="(620,170)" name="Circuito de 9 à 0">
+      <a name="facing" val="west"/>
+      <a name="label" val="Circuito 9 à 0"/>
+      <a name="labelfont" val="Times New Roman bold 12"/>
+    </comp>
     <comp lib="4" loc="(380,270)" name="D Flip-Flop"/>
-    <comp lib="5" loc="(750,120)" name="Hex Digit Display"/>
+    <comp lib="0" loc="(740,180)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
+    </comp>
+    <comp lib="4" loc="(470,270)" name="D Flip-Flop"/>
+    <comp lib="0" loc="(260,240)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="CLOCK"/>
+      <a name="labelfont" val="Times New Roman bold 12"/>
+    </comp>
   </circuit>
   <circuit name="Circuito de 9 à 0">
     <a name="circuit" val="Circuito de 9 à 0"/>
@@ -390,70 +390,9 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(180,290)" to="(180,340)"/>
     <wire from="(140,230)" to="(220,230)"/>
     <wire from="(220,310)" to="(300,310)"/>
-    <comp lib="1" loc="(260,550)" name="NOT Gate">
-      <a name="size" val="20"/>
-    </comp>
-    <comp lib="1" loc="(260,100)" name="NOT Gate">
-      <a name="size" val="20"/>
-    </comp>
-    <comp lib="6" loc="(247,38)" name="Text">
-      <a name="text" val="Circuito para usar no contador de 0 à 9"/>
-      <a name="font" val="Times New Roman bold 13"/>
-    </comp>
-    <comp lib="1" loc="(260,400)" name="NOT Gate">
-      <a name="size" val="20"/>
-    </comp>
-    <comp lib="1" loc="(400,520)" name="OR Gate">
+    <comp lib="1" loc="(330,520)" name="AND Gate">
       <a name="size" val="30"/>
       <a name="inputs" val="3"/>
-    </comp>
-    <comp lib="0" loc="(430,520)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="S1"/>
-      <a name="labelloc" val="north"/>
-      <a name="labelfont" val="Times New Roman bold 13"/>
-    </comp>
-    <comp lib="1" loc="(400,350)" name="OR Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="3"/>
-    </comp>
-    <comp lib="1" loc="(260,620)" name="NOT Gate">
-      <a name="size" val="20"/>
-    </comp>
-    <comp lib="1" loc="(260,520)" name="NOT Gate">
-      <a name="size" val="20"/>
-    </comp>
-    <comp lib="1" loc="(260,130)" name="NOT Gate">
-      <a name="size" val="20"/>
-    </comp>
-    <comp lib="1" loc="(330,350)" name="AND Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="1" loc="(260,590)" name="NOT Gate">
-      <a name="size" val="20"/>
-    </comp>
-    <comp lib="1" loc="(260,430)" name="NOT Gate">
-      <a name="size" val="20"/>
-    </comp>
-    <comp lib="1" loc="(330,300)" name="AND Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="1" loc="(260,70)" name="NOT Gate">
-      <a name="size" val="20"/>
-    </comp>
-    <comp lib="1" loc="(260,660)" name="NOT Gate">
-      <a name="size" val="20"/>
-    </comp>
-    <comp lib="1" loc="(410,200)" name="OR Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="3"/>
-    </comp>
-    <comp lib="1" loc="(340,200)" name="AND Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
     </comp>
     <comp lib="0" loc="(140,230)" name="Pin">
       <a name="tristate" val="false"/>
@@ -461,30 +400,20 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="labelloc" val="north"/>
       <a name="labelfont" val="Times New Roman bold 13"/>
     </comp>
-    <comp lib="0" loc="(140,180)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="Q1"/>
-      <a name="labelloc" val="north"/>
-      <a name="labelfont" val="Times New Roman bold 13"/>
+    <comp lib="1" loc="(400,520)" name="OR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="3"/>
     </comp>
-    <comp lib="0" loc="(140,80)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="Q3"/>
-      <a name="labelloc" val="north"/>
-      <a name="labelfont" val="Times New Roman bold 13"/>
-    </comp>
-    <comp lib="0" loc="(140,130)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="Q2"/>
-      <a name="labelloc" val="north"/>
-      <a name="labelfont" val="Times New Roman bold 13"/>
-    </comp>
-    <comp lib="1" loc="(330,470)" name="AND Gate">
+    <comp lib="1" loc="(330,300)" name="AND Gate">
       <a name="size" val="30"/>
       <a name="inputs" val="2"/>
     </comp>
     <comp lib="1" loc="(260,160)" name="NOT Gate">
       <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(400,350)" name="OR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="3"/>
     </comp>
     <comp lib="0" loc="(430,660)" name="Pin">
       <a name="facing" val="west"/>
@@ -493,22 +422,26 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="labelloc" val="north"/>
       <a name="labelfont" val="Times New Roman bold 13"/>
     </comp>
-    <comp lib="1" loc="(330,400)" name="AND Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="3"/>
+    <comp lib="0" loc="(430,520)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="S1"/>
+      <a name="labelloc" val="north"/>
+      <a name="labelfont" val="Times New Roman bold 13"/>
     </comp>
-    <comp lib="1" loc="(340,250)" name="AND Gate">
+    <comp lib="1" loc="(330,470)" name="AND Gate">
       <a name="size" val="30"/>
       <a name="inputs" val="2"/>
     </comp>
-    <comp lib="1" loc="(860,340)" name="AND Gate"/>
-    <comp lib="1" loc="(330,590)" name="AND Gate">
+    <comp lib="1" loc="(330,350)" name="AND Gate">
       <a name="size" val="30"/>
-      <a name="inputs" val="3"/>
+      <a name="inputs" val="2"/>
     </comp>
-    <comp lib="1" loc="(340,110)" name="AND Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="4"/>
+    <comp lib="0" loc="(140,80)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="Q3"/>
+      <a name="labelloc" val="north"/>
+      <a name="labelfont" val="Times New Roman bold 13"/>
     </comp>
     <comp lib="0" loc="(430,350)" name="Pin">
       <a name="facing" val="west"/>
@@ -524,9 +457,75 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="labelloc" val="north"/>
       <a name="labelfont" val="Times New Roman bold 13"/>
     </comp>
-    <comp lib="1" loc="(330,520)" name="AND Gate">
+    <comp lib="1" loc="(260,100)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(340,110)" name="AND Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="4"/>
+    </comp>
+    <comp lib="1" loc="(410,200)" name="OR Gate">
       <a name="size" val="30"/>
       <a name="inputs" val="3"/>
+    </comp>
+    <comp lib="0" loc="(140,180)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="Q1"/>
+      <a name="labelloc" val="north"/>
+      <a name="labelfont" val="Times New Roman bold 13"/>
+    </comp>
+    <comp lib="6" loc="(247,38)" name="Text">
+      <a name="text" val="Circuito para usar no contador de 0 à 9"/>
+      <a name="font" val="Times New Roman bold 13"/>
+    </comp>
+    <comp lib="1" loc="(260,660)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(340,200)" name="AND Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(260,430)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(260,70)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(260,520)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(330,590)" name="AND Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="3"/>
+    </comp>
+    <comp lib="1" loc="(260,400)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(260,590)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(340,250)" name="AND Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(260,550)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(260,620)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="0" loc="(140,130)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="Q2"/>
+      <a name="labelloc" val="north"/>
+      <a name="labelfont" val="Times New Roman bold 13"/>
+    </comp>
+    <comp lib="1" loc="(330,400)" name="AND Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="3"/>
+    </comp>
+    <comp lib="1" loc="(260,130)" name="NOT Gate">
+      <a name="size" val="20"/>
     </comp>
   </circuit>
 </project>
